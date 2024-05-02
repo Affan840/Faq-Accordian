@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900);
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Work Sans";
+  background-color: var(--Light-pink);
+}
+
+#accordian {
+  margin: 10vh auto;
+  width: 30%;
+  min-width: 500px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+#accordian .header {
+  display: flex;
+  gap: 1em;
+}
+
+#accordian .header h1 {
+  font-size: 3rem;
+}
+
+
+
+.accordians{
+  margin-top: 2em;
+  border-bottom: 1px solid rgba(192, 191, 191, 0.24);
+  padding-bottom: 1em;
+}
+.accordians .question{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordians .question h5{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--Dark-purple);
+}
+.accordians .question h5:active{
+  color: #AD28EB;
+}
+.accordians .answer{
+  margin-top: .5em;
+  color: var(--Grayish-purple);
+  line-height: 1.5;
+}
+
+.ans1, .ans2, .ans3, .ans4{
+  display: none;
+}
+
+
+@media (max-width: 600px) {
+  html{
+    font-size: 10px;
+  }
+  #accordian{
+    width: 80vw;
+    min-width: 50px;
+    /* background-color: red; */
+  }
+  .accordians .question img{
+    height: 2em;
+  }
+}
